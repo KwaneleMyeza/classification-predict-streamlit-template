@@ -43,13 +43,13 @@ raw = pd.read_csv("resources/train.csv")
 
 def switch_case(case):
     if case == 1:
-        return 'Pro: the tweet supports the belief of man-made climate change'
+        return 'Pro: In a parliament which includes climate change deniers, austerity junkies &amp; voracious vandals of the cultura'
     elif case == 2:
-        return 'News: the tweet links to factual news about climate change'
+        return 'Swedish politicians troll Trump administration while signing climate change law'
     elif case == 0:
-        return 'Neutral: the tweet neither supports nor refutes the belief of man-made climate change'
+        return 'Neutral: Look who's back in town! And thank you, global warming'
     elif case == -1:
-        return 'Anti: the tweet does not believe in man-made climate change Variable definitions'
+        return 'Anti: Hey I tweeted about the Man made global warming scam and immediately lost a couple of followers'
 
 
 def pie_chart():
@@ -180,13 +180,13 @@ The collection of this data was funded by a Canada Foundation for Innovation JEL
 
 **Class Description**
 
-2 - News: the tweet links to factual news about climate change
+2 - News: Swedish politicians troll Trump administration while signing climate change law
 
-1 - Pro: the tweet supports the belief of man-made climate change
+1 - Pro: In a parliament which includes climate change deniers, austerity junkies &amp; voracious vandals of the cultura
 
-0 - Neutral: the tweet neither supports nor refutes the belief of man-made climate change
+0 - Neutral: Look who's back in town! And thank you, global warming
 
--1 - Anti: the tweet does not believe in man-made climate change Variable definitions
+-1 - Anti: Hey I tweeted about the Man made global warming scam and immediately lost a couple of followers
 
 **Features**
 
