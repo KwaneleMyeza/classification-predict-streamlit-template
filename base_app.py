@@ -47,7 +47,7 @@ def switch_case(case):
     elif case == 2:
         return 'Swedish politicians troll Trump administration while signing climate change law'
     elif case == 0:
-        return 'Neutral: Look who's back in town! And thank you, global warming'
+        return 'Neutral: Look who\'s back in town! And thank you, global warming'
     elif case == -1:
         return 'Anti: Hey I tweeted about the Man made global warming scam and immediately lost a couple of followers'
 
