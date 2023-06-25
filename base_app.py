@@ -200,6 +200,11 @@ def main():
     """Tweet Classifier App with Streamlit"""
     # Creates a main title and subheader on your page -
     # these are static across all pages
+    logo_image = "PredictiveEdge_Inc_Logo.png"
+    st.sidebar.image(logo_image, width=150)
+    st.sidebar.markdown("")
+    st.sidebar.markdown("")
+    st.sidebar.markdown("")
     st.title("Tweet Classifier")
     st.subheader("Climate change sentiment classification")
 
@@ -249,19 +254,19 @@ def main():
             # Load your .pkl file with the model of your choice + make predictions
             # Try loading in multiple models to give the user a choice
 
-            # if model_selection == "Logistic Regression":
-            # 	predictor = joblib.load(open(os.path.join("Streamlit/Logreg.pkl"),"rb"))
+            if model_selection == "Logistic Regression":
+                predictor = joblib.load(open(os.path.join("Streamlit/Logreg.pkl"),"rb"))
+                
+            elif model_selection == "Neural Network Classifier":
+                predictor = joblib.load(open(os.path.join("Streamlit/Mlp.pkl"),"rb"))
 
-            # elif model_selection == "Neural Network Classifier":
-            # 	predictor = joblib.load(open(os.path.join("Streamlit/Mlp.pkl"),"rb"))
+            elif model_selection == "Support Vector Machines":
+                predictor = joblib.load(open(os.path.join("Streamlit/Svm.pkl"),"rb"))
 
-            # elif model_selection == "Support Vector Machines":
-            # 	predictor = joblib.load(open(os.path.join("Streamlit/Svm.pkl"),"rb"))
+            elif model_selection == "Stochastic Gradient Descent":
+                predictor = joblib.load(open(os.path.join("Streamlit/Sgc.pkl"),"rb"))
 
-            # elif model_selection == "Stochastic Gradient Descent":
-            # 	predictor = joblib.load(open(os.path.join("Streamlit/Sgc.pkl"),"rb"))
-
-            predictor = joblib.load(open(os.path.join("resources/Logistic_regression.pkl"), "rb"))
+            # predictor = joblib.load(open(os.path.join("resources/Logistic_regression.pkl"), "rb"))
             prediction = predictor.predict(vect_text)
             result = switch_case(prediction)
 
